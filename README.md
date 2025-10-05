@@ -218,7 +218,7 @@ Python & FastAPI Backend Developer
 📧 **Email:** [Ayushup17@yahoo.com](mailto:Ayushup17@yahoo.com)
 🌐 **Portfolio:** [ayush-dev-portfolio](https://ayush-dev-portfolio-sigma.vercel.app/)
 🌐 **Company:** [Growthify Services](https://www.growthifyservices.in)
-📍 Bhopal, India
+📍 Ahmedabad, India
 
 ---
 
