@@ -1,0 +1,7 @@
+pip install "fastapi[standard]" sqlalchemy[asyncio] aiosqlite alembic
+
+alembic init -t async alembic
+
+alembic revision --autogenerate -m "create note table"
+
+alembic upgrade head

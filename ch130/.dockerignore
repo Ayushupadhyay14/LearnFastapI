@@ -1,0 +1,19 @@
+# Ignore Git files
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Env files
+.env
+*.env
+
+# React dev junk
+node_modules
+npm-debug.log
+dist
+.vscode
+.DS_Store

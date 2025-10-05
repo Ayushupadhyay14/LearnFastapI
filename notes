@@ -1,0 +1,17 @@
+Create Virtual ENV
+  python -m venv venv
+
+Activate ENV
+  source venv/bin/activate    # For Mac/Ubunut
+  venv\scripts\activate       # For Windows
+
+Install Packages from requirements.txt
+  pip install -r requirements.txt
+
+Change Directory to app
+	cd app
+
+Run FastAPI dev server
+	fastapi dev main.py
+
+

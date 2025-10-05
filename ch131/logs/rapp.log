@@ -1,0 +1,2 @@
+2025-08-08 12:00:27,769 - ch131 - INFO - routers.py:list_all_products:9 - Product all products route accessed
+2025-08-08 12:00:27,770 - ch131 - ERROR - services.py:get_all_products:4 - Data could not fetch due to Db int issue

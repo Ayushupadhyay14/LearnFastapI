@@ -1,0 +1,3 @@
+pip install "fastapi[standard]" "sqlalchemy[asyncio]" aiosqlite
+
+pip install python-jose[cryptography] passlib[bcrypt]

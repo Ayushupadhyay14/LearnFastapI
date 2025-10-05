@@ -1,0 +1,31 @@
+alembic init [directory]
+Initialize a new Alembic environment in the specified directory. This sets up the configuration files and script directory needed for migrations.
+
+alembic revision -m "message" [--autogenerate]
+Create a new migration script.
+  Use -m to add a message describing the migration.
+  Add --autogenerate to automatically generate migration code based on model and database differences.
+
+alembic upgrade [revision]
+Apply migrations up to the specified revision (e.g., head for the latest). This updates the database schema to the desired state.
+
+alembic upgrade +2
+This command upgrades your database schema forward by two migration steps from the current revision, applying the next two migrations in sequence
+
+alembic downgrade [revision]
+Revert migrations down to the specified revision, effectively rolling back schema changes.
+
+alembic downgrade -1
+This command downgrades (rolls back) your database schema by one migration step from the current revision, reverting the most recent migration
+
+alembic current
+Display the current revision(s) applied to the database.
+
+alembic history
+Show the list of all migration scripts in chronological order.
+
+alembic check
+Check if there are pending upgrade operations when using autogenerate (available in newer versions).
+
+alembic list_templates
+List available migration environment templates for initializing new projects.

@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Upload Resume{% endblock %}
+
+{% block content %}
+<h1>Resume Upload Form</h1>
+<form action="/resumes/upload" method="post" enctype="multipart/form-data">
+    <label>Name:
+        <input type="text" name="name" required>
+    </label>
+
+    <label>Email:
+        <input type="email" name="email" required>
+    </label>
+
+    <label>Date of Birth:
+        <input type="date" name="dob" required>
+    </label>
+
+    <label>State:
+        <select name="state" required>
+            {% for state in indian_states %}
+                <option value="{{ state }}">{{ state }}</option>
+            {% endfor %}
+        </select>
+    </label>
+
+    <label>Gender:</label>
+    <div class="radio-group">
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female" required> Female</label>
+        <label><input type="radio" name="gender" value="other" required> Other</label>
+    </div>
+
+    <label>Preferred Locations:</label>
+    <div class="checkbox-group">
+        {% for city in preferred_location_options %}
+            <label><input type="checkbox" name="preferred_locations" value="{{ city }}"> {{ city }}</label>
+        {% endfor %}
+    </div>
+
+    <label>Upload Image:
+        <input type="file" name="image" accept="image/*" required>
+    </label>
+
+    <label>Upload Resume File:
+        <input type="file" name="resume_file" accept=".pdf,.doc,.docx" required>
+    </label>
+
+    <button type="submit">Submit Resume</button>
+</form>
+{% endblock %}

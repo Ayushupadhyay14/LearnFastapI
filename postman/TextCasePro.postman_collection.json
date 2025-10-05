@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "a6c5cb44-5286-43ee-b3f1-a098cc1eb21b",
+		"name": "TextCasePro",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47004022",
+		"_collection_link": "https://sadev70485-8095837.postman.co/workspace/FastAPI~7e9cb277-4459-4c22-88a2-5bda50dff593/collection/47004022-a6c5cb44-5286-43ee-b3f1-a098cc1eb21b?action=share&source=collection_link&creator=47004022"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"kunal@example.com\",\r\n    \"name\": \"kunal\",\r\n    \"password\": \"kunal123\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{basURL}}/api/account/register",
+					"host": [
+						"{{basURL}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "kunal@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "kunal123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{basURL}}/api/account/login",
+					"host": [
+						"{{basURL}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Me",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzIiwiZXhwIjoxNzUzMjgzODcwfQ.sdQGKDXUGNf86aFkENVzHArX43kXMriAsZFXUvxTM7Q",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "kunal@example.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "kunal123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{basURL}}/api/account/me",
+					"host": [
+						"{{basURL}}"
+					],
+					"path": [
+						"api",
+						"account",
+						"me"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

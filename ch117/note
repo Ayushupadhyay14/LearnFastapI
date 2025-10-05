@@ -1,0 +1,16 @@
+docker-compose up --build
+
+# Start services
+docker-compose up
+
+# OR, run in background
+docker-compose up -d
+
+# Open bash in app container if needed
+docker exec -it fastapi_con bash
+
+# Stop when done
+docker-compose down
+
+fastapi dev app/main.py --host "0.0.0.0" --port 8000
+

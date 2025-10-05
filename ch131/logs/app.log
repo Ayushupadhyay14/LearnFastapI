@@ -1,0 +1,8 @@
+2025-08-08 11:47:54,766 - ch131 - INFO - main.py:root:9 - Root endpoint accesssed
+2025-08-08 11:49:53,270 - ch131 - INFO - main.py:root:9 - Root endpoint accesssed
+2025-08-08 11:49:53,270 - ch131 - WARNING - main.py:root:10 - Root accessed stop it
+2025-08-08 11:51:08,573 - ch131 - INFO - routers.py:list_all_products:9 - Product all products route accessed
+2025-08-08 11:52:26,950 - ch131 - INFO - routers.py:list_all_products:9 - Product all products route accessed
+2025-08-08 11:52:26,951 - ch131 - ERROR - services.py:get_all_products:4 - Data could not fetch due to Db int issue
+2025-08-08 11:54:38,419 - ch131 - INFO - routers.py:list_all_products:9 - Product all products route accessed
+2025-08-08 11:54:38,419 - ch131 - ERROR - services.py:get_all_products:4 - Data could not fetch due to Db int issue

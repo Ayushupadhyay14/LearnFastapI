@@ -1,0 +1,66 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Distribution / packaging
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Installer logs
+pip-log.txt
+
+# Pytest cache
+.pytest_cache/
+
+# mypy cache
+.mypy_cache/
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# IDE / Editor configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS / File system
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.*
+
+# Git
+.git
+.gitignore
+
+# Docker-related
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Alembic
+alembic.ini
+alembic/versions/*.pyc
+
+# __init__.py compiled
+**/__init__.pyc

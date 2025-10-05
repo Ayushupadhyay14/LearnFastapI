@@ -1,0 +1,108 @@
+2025-08-08 15:45:10,861 - ch132 - WARNING - errors.py:validation_exception_handler:7 - Validation error: [{'type': 'int_parsing', 'loc': ('path', 'item_id'), 'msg': 'Input should be a valid integer, unable to parse string as an integer', 'input': 'abc'}] - URL: http://127.0.0.1:8000/items/abc
+2025-08-08 15:46:00,317 - ch132 - WARNING - errors.py:validation_exception_handler:7 - Validation error: [{'type': 'float_parsing', 'loc': ('path', 'price'), 'msg': 'Input should be a valid number, unable to parse string as a number', 'input': 'abc'}] - URL: http://127.0.0.1:8000/product/abc
+2025-08-08 15:50:44,404 - ch132 - ERROR - errors.py:global_exception_handler:14 - Unhandled error: division by zero - URL: http://127.0.0.1:8000/crash
+Traceback (most recent call last):
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\routing.py", line 78, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\routing.py", line 75, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\fastapi\routing.py", line 302, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\fastapi\routing.py", line 215, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\concurrency.py", line 38, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2476, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+  File "C:\fastapicode\ch132\app\main.py", line 25, in crash
+    x = 1 / 0  # ZeroDivisionError
+        ~~^~~
+ZeroDivisionError: division by zero
+2025-08-08 15:54:14,691 - ch132 - ERROR - errors.py:global_exception_handler:14 - Unhandled error: division by zero - URL: http://127.0.0.1:8000/crash
+Traceback (most recent call last):
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\middleware\errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\routing.py", line 78, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\routing.py", line 75, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\fastapi\routing.py", line 302, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\fastapi\routing.py", line 215, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\starlette\concurrency.py", line 38, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2476, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\fastapicode\ch131\venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 967, in run
+    result = context.run(func, *args)
+  File "C:\fastapicode\ch132\app\main.py", line 25, in crash
+    x = 1 / 0  # ZeroDivisionError
+        ~~^~~
+ZeroDivisionError: division by zero

@@ -1,0 +1,96 @@
+/* General body styling */
+body {
+  background: #f8fafc;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  color: #2e7d32;
+  letter-spacing: 2px;
+}
+
+/* Form styling */
+form {
+  background: #fff;
+  max-width: 400px;
+  margin: 30px auto 0 auto;
+  padding: 30px 30px 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(44, 62, 80, 0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #bdbdbd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+  background: #f6f8fa;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #2e7d32;
+  outline: none;
+}
+
+button[type="submit"] {
+  background: linear-gradient(90deg, #43a047, #81c784);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #388e3c, #66bb6a);
+}
+
+/* Divider */
+hr {
+  margin: 40px auto 20px auto;
+  width: 60%;
+  border: none;
+  border-top: 2px solid #e0e0e0;
+}
+
+/* Product list */
+ul {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  background: #fff;
+  margin-bottom: 16px;
+  padding: 18px 22px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(44, 62, 80, 0.05);
+  font-size: 1.08rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+li::before {
+  content: "🛒";
+  margin-right: 12px;
+  font-size: 1.2em;
+}

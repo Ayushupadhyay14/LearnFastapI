@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+*.env
+*.db
+.env*
+
+# FastAPI
+fastapi/__pycache__/
+fastapi/.env
+fastapi/venv
+
+# React/Vite
+reactjs/node_modules/
+reactjs/.env
+reactjs/dist/
+
+# Docker
+*.pid
+*.sock
+*.tar
+*.gz
+*.img
+.docker/
+
+# VSCode and OS
+.vscode/
+.DS_Store

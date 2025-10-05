@@ -1,0 +1,5 @@
+Sync:
+    pip install "fastapi[standard]" sqlalchemy psycopg2-binary
+
+Async:
+    pip install "fastapi[standard]" sqlalchemy[asyncio] asyncpg

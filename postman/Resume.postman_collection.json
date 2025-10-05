@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "fa864618-b480-4ee5-9385-27f275ce316f",
+		"name": "Resume",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "47004022",
+		"_collection_link": "https://sadev70485-8095837.postman.co/workspace/FastAPI~7e9cb277-4459-4c22-88a2-5bda50dff593/collection/47004022-fa864618-b480-4ee5-9385-27f275ce316f?action=share&source=collection_link&creator=47004022"
+	},
+	"item": [
+		{
+			"name": "Create Resume",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "raj",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "raj346@example.com",
+							"type": "text"
+						},
+						{
+							"key": "dob",
+							"value": "2021-12-24",
+							"type": "text"
+						},
+						{
+							"key": "state",
+							"value": "BH",
+							"type": "text"
+						},
+						{
+							"key": "gender",
+							"value": "male",
+							"type": "text"
+						},
+						{
+							"key": "preferred_locations",
+							"value": "mum, pune",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/C:/Users/R/Downloads/New folder/Saree/saree7.jpg"
+						},
+						{
+							"key": "resume_file",
+							"type": "file",
+							"src": "/C:/Users/R/Downloads/New folder/Saree/TextCasePro_SDLC.pdf"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{basURL}}/resumes/upload",
+					"host": [
+						"{{basURL}}"
+					],
+					"path": [
+						"resumes",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "All Resume",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{basURL}}/resumes",
+					"host": [
+						"{{basURL}}"
+					],
+					"path": [
+						"resumes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,49 @@
+services:
+  mysql_db:
+    container_name: mysql_con
+    image: mysql:9.3.0
+    restart: always
+    ports:
+      - "3306:3306"
+    env_file:
+      - .env
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 10s
+      retries: 5
+      start_period: 30s
+
+  phpmyadmin:
+    container_name: phpmyadmin_con
+    image: phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: mysql_db
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    depends_on:
+      - mysql_db
+
+  fastapi_app:
+    container_name: fastapi_con
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file:
+      - .env
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/ch117
+    depends_on:
+      mysql_db:
+        condition: service_healthy
+
+volumes:
+  mysql_data:
+    
+    

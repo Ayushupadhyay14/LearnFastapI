@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}All Resumes{% endblock %}
+
+{% block content %}
+<h1>Resume Uploader Application</h1>
+<a href="/create">Add New Resume</a>
+
+{% if resumes %}
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>DOB</th>
+            <th>State</th>
+            <th>Preferred Locations</th>
+            <th>Image</th>
+            <th>Resume</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for resume in resumes %}
+        <tr>
+            <td>{{ resume.id }}</td>
+            <td>{{ resume.name }}</td>
+            <td>{{ resume.email }}</td>
+            <td>{{ resume.gender.value|capitalize }}</td>
+            <td>{{ resume.dob }}</td>
+            <td>{{ resume.state }}</td>
+            <td>{{ resume.preferred_locations }}</td>
+            <td><img src="{{ resume.image_path }}" alt="Profile Image" width="60"></td>
+
+            <td><a href="{{ resume.resume_file_path }}" target="_blank">Download</a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+    <p>No resumes uploaded yet.</p>
+{% endif %}
+{% endblock %}
